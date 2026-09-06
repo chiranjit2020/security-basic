@@ -65,6 +65,7 @@ extra:
 
 not_in_nav: |
   offline.md
+  design-system.md
 
 validation:
   omitted_files: warn
@@ -76,7 +77,6 @@ validation:
 nav:
   - Home: index.md
   - Roadmap: roadmap.md
-  - Design System: design-system.md
   - Foundations:
       - foundations/index.md
       - The Three States of Data: foundations/states-of-data.md
