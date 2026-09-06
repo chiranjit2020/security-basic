@@ -74,3 +74,4 @@ nav:
       - Chapter 2 — Authentication vs Authorization: chapters/02-authentication-vs-authorization.md
       - Chapter 3 — Encryption vs Hashing vs Encoding: chapters/03-encryption-hashing-encoding.md
       - Chapter 4 — Symmetric vs Asymmetric Cryptography: chapters/04-symmetric-vs-asymmetric.md
+      - Chapter 5 — TLS, HTTPS & Digital Certificates: chapters/05-tls-https-certificates.md

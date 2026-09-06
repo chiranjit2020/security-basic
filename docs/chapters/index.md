@@ -9,6 +9,7 @@ the answer.
 | 2 | [Authentication vs Authorization](02-authentication-vs-authorization.md) | Published |
 | 3 | [Encryption vs Hashing vs Encoding](03-encryption-hashing-encoding.md) | Published |
 | 4 | [Symmetric vs Asymmetric Cryptography](04-symmetric-vs-asymmetric.md) | Published |
+| 5 | [TLS, HTTPS & Digital Certificates](05-tls-https-certificates.md) | Published |
 
 <!--
 Add each new chapter as docs/chapters/NN-slug.md, then:
