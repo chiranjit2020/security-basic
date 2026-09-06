@@ -1,0 +1,67 @@
+site_name: Security Basics
+site_description: A backend developer's mental model for web application security.
+site_author: Chiranjit
+site_url: https://chiranjit2020.github.io/security-basic/
+repo_url: https://github.com/chiranjit2020/security-basic
+repo_name: chiranjit2020/security-basic
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  font:
+    text: Ubuntu
+    code: Ubuntu Mono
+  palette:
+    scheme: slate
+    primary: teal
+    accent: teal
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - content.code.copy
+    - content.action.edit
+    - search.suggest
+    - search.highlight
+  icon:
+    repo: fontawesome/brands/github
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  nav:
+    omitted_files: warn
+
+nav:
+  - Home: index.md
+  - Chapters:
+      - chapters/index.md

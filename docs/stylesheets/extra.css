@@ -1,0 +1,33 @@
+/* Security Basics — dark theme tweaks */
+
+:root {
+  --md-text-font: "Ubuntu";
+  --md-code-font: "Ubuntu Mono";
+}
+
+/* Force the dark palette regardless of OS preference */
+[data-md-color-scheme="slate"] {
+  --md-hue: 210;
+  --md-default-bg-color: #12161c;
+  --md-code-bg-color: #1b2027;
+}
+
+/* Slightly roomier code blocks for the ASCII diagrams used throughout */
+.md-typeset pre > code {
+  line-height: 1.5;
+}
+
+/* The "question" admonition that opens every chapter */
+.md-typeset .admonition.question,
+.md-typeset details.question {
+  border-color: #26c6da;
+}
+.md-typeset .question > .admonition-title,
+.md-typeset .question > summary {
+  background-color: rgba(38, 198, 218, 0.12);
+}
+
+/* Keep wide ASCII diagrams scrollable rather than squished */
+.md-typeset pre {
+  overflow-x: auto;
+}
