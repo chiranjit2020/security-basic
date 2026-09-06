@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repository is
 
-A **documentation site** ("Security Basics") built with **MkDocs + Material**, teaching web
+A **documentation site** ("Web Security") built with **MkDocs + Material**, teaching web
 application security as an *engineering mental model* for a backend developer rather than as
 exam definitions. Published to GitHub Pages at
 `https://chiranjit2020.github.io/security-basic/`.

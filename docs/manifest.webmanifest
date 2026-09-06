@@ -1,6 +1,6 @@
 {
-  "name": "Security Basics",
-  "short_name": "Security Basics",
+  "name": "Web Security",
+  "short_name": "Web Security",
   "description": "A backend developer's mental model for web application security.",
   "lang": "en",
   "dir": "ltr",

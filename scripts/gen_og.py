@@ -52,7 +52,7 @@ d.polygon(_poly(STEM, cx, cy, s), fill=DARK[:3])
 
 # text block, right
 tx = 500
-d.text((tx, 232), "Security Basics", font=font(bold, 76), fill=WHITE[:3])
+d.text((tx, 232), "Web Security", font=font(bold, 76), fill=WHITE[:3])
 d.text((tx, 338), "A backend developer's mental model", font=font(regular, 34), fill=MUTED[:3])
 d.text((tx, 386), "for web application security.", font=font(regular, 34), fill=MUTED[:3])
 

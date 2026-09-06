@@ -1,4 +1,4 @@
-/* Security Basics — service worker
+/* Web Security — service worker
    Scope: the directory this file is served from (the site root on GitHub Pages).
    Strategy:
      - navigations  -> network-first, fall back to cache, then the offline page

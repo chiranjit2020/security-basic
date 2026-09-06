@@ -1,5 +1,5 @@
 /* ============================================================================
-   Security Basics — Design System
+   Web Security — Design System
    Adapted from the Red Hat Design System (https://ux.redhat.com).
    Token values below are the RHDS "crayon" palette and scales; the theme is
    dark-first, and the font is Ubuntu / Ubuntu Mono per the site brief.
@@ -468,4 +468,35 @@ body,
   background: var(--rh-color-red-50);
   border-radius: var(--rh-border-radius);
   vertical-align: middle;
+}
+
+/* ------------------------------------------------------------------ *
+ * 12. Phone (<= 600px): flat 18px headings, 14px body + code         *
+ * ------------------------------------------------------------------ */
+@media screen and (max-width: 600px) {
+  body,
+  .md-typeset {
+    font-size: 14px;
+  }
+  .md-typeset h1,
+  .md-typeset h2,
+  .md-typeset h3,
+  .md-typeset h4,
+  .md-typeset h5,
+  .md-typeset h6 {
+    font-size: 18px;
+  }
+  .md-typeset p,
+  .md-typeset li {
+    font-size: 14px;
+  }
+  .md-typeset code,
+  .md-typeset pre > code {
+    font-size: 14px;
+  }
+  /* admonition body tracks the 14px scale too */
+  .md-typeset .admonition,
+  .md-typeset details {
+    font-size: 14px;
+  }
 }

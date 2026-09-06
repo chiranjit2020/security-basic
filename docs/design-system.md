@@ -69,7 +69,7 @@ keep the monospace grid). Body line-height `1.5`, heading line-height `1.3`.
 Headings render at a compressed 22 → 16 px scale.
 
 <div markdown="0">
-  <div class="sb-type-row"><span class="sb-type-row__label">h1<br>1.375rem · 700 · OCR A</span><span style="font-family:'OCR A Std',monospace;font-size:1.375rem;font-weight:700">Security Basics</span></div>
+  <div class="sb-type-row"><span class="sb-type-row__label">h1<br>1.375rem · 700 · OCR A</span><span style="font-family:'OCR A Std',monospace;font-size:1.375rem;font-weight:700">Web Security</span></div>
   <div class="sb-type-row"><span class="sb-type-row__label">h2<br>1.25rem · 700 · OCR A</span><span style="font-family:'OCR A Std',monospace;font-size:1.25rem;font-weight:700">Confidentiality</span></div>
   <div class="sb-type-row"><span class="sb-type-row__label">h3<br>1.125rem · 500 · OCR A</span><span style="font-family:'OCR A Std',monospace;font-size:1.125rem;font-weight:500">Broken confidentiality</span></div>
   <div class="sb-type-row"><span class="sb-type-row__label">h4–h6<br>1rem · OCR A</span><span style="font-family:'OCR A Std',monospace;font-size:1rem;font-weight:700">Session-based authentication</span></div>

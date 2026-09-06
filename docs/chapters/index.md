@@ -1,5 +1,5 @@
 ---
-description: The Security Basics chapters — each opens with a question, then the answer. CIA triad, authentication vs authorization, cryptography, TLS.
+description: The Web Security chapters — each opens with a question, then the answer. CIA triad, authentication vs authorization, cryptography, TLS.
 ---
 
 # Chapters
