@@ -8,7 +8,10 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
+  custom_dir: overrides
   language: en
+  logo: assets/icons/logo.svg
+  favicon: assets/icons/icon.svg
   font:
     text: Ubuntu
     code: Ubuntu Mono
@@ -53,6 +56,9 @@ markdown_extensions:
 
 plugins:
   - search
+
+not_in_nav: |
+  offline.md
 
 validation:
   omitted_files: warn
