@@ -65,3 +65,4 @@ nav:
   - Home: index.md
   - Chapters:
       - chapters/index.md
+      - Chapter 1 — CIA Triad: chapters/01-cia-triad.md

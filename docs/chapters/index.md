@@ -5,7 +5,7 @@ the answer.
 
 | # | Chapter | Status |
 |---|---------|--------|
-| — | *Chapters will be listed here as they are added* | — |
+| 1 | [CIA Triad](01-cia-triad.md) | Published |
 
 <!--
 Add each new chapter as docs/chapters/NN-slug.md, then:
