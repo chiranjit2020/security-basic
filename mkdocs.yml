@@ -73,3 +73,4 @@ nav:
       - Chapter 1 — CIA Triad: chapters/01-cia-triad.md
       - Chapter 2 — Authentication vs Authorization: chapters/02-authentication-vs-authorization.md
       - Chapter 3 — Encryption vs Hashing vs Encoding: chapters/03-encryption-hashing-encoding.md
+      - Chapter 4 — Symmetric vs Asymmetric Cryptography: chapters/04-symmetric-vs-asymmetric.md

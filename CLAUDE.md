@@ -48,7 +48,8 @@ deploys to GitHub Pages. GitHub repo Settings → Pages → Source must be set t
   - `chapter-05.md` → `chapters/01-cia-triad.md`
   - `chapter-06.md` → `chapters/02-authentication-vs-authorization.md`
   - `chapter-07.md` → `chapters/03-encryption-hashing-encoding.md`
-  New drafts may land as `drafts/chapter-08.md`, etc. `3-states-of-data.png` lives here and
+  - `chapter-08.md` → `chapters/04-symmetric-vs-asymmetric.md`
+  New drafts may land as `drafts/chapter-09.md`, etc. `3-states-of-data.png` lives here and
   is copied to `docs/assets/`.
 - `.github/workflows/deploy.yml` — CI build + Pages deploy.
 
