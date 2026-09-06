@@ -6,6 +6,8 @@ the answer.
 | # | Chapter | Status |
 |---|---------|--------|
 | 1 | [CIA Triad](01-cia-triad.md) | Published |
+| 2 | Authentication vs Authorization | Pending |
+| 3 | [Encryption vs Hashing vs Encoding](03-encryption-hashing-encoding.md) | Published |
 
 <!--
 Add each new chapter as docs/chapters/NN-slug.md, then:

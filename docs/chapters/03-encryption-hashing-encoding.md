@@ -1,4 +1,9 @@
-# Chapter 3 — Encryption vs Hashing vs Encoding 🔐
+# Chapter 3 — Encryption vs Hashing vs Encoding
+
+!!! question "The question"
+    HTTPS, passwords, JWT, API keys, Base64, AES, RSA, SHA-256, bcrypt, Argon2 — a beginner
+    lumps them together as "ways of making data unreadable." Why is that wrong, and what
+    problem does each one actually solve?
 
 This is a **critical chapter for web development**, because these three terms are constantly mixed up.
 
@@ -25,7 +30,7 @@ They solve fundamentally different problems.
 
 ---
 
-# 1. The big picture
+## 1. The big picture
 
 Think of three different goals:
 
@@ -50,9 +55,9 @@ The simplest rule:
 
 ---
 
-# 2. Encryption 🔒
+## 2. Encryption 🔒
 
-### Goal:
+#### Goal:
 
 > **Keep data secret from people who don't have the key.**
 
@@ -76,7 +81,7 @@ Ciphertext
 Plaintext
 ```
 
-### Important:
+#### Important:
 
 **Encryption is reversible.**
 
@@ -84,7 +89,7 @@ That's the defining characteristic.
 
 ---
 
-## Web-development example
+### Web-development example
 
 Suppose your application has:
 
@@ -120,7 +125,7 @@ That's encryption.
 
 ---
 
-# 3. Encryption has a key
+## 3. Encryption has a key
 
 This is crucial.
 
@@ -138,7 +143,7 @@ Without the key, the ciphertext should be computationally impractical to decrypt
 
 You'll later learn:
 
-### Symmetric encryption
+#### Symmetric encryption
 
 Same key:
 
@@ -161,7 +166,7 @@ Examples:
 
 ---
 
-### Asymmetric encryption
+#### Asymmetric encryption
 
 Two related keys:
 
@@ -182,11 +187,11 @@ Don't worry about the mathematics yet.
 
 ---
 
-# 4. Hashing #️⃣
+## 4. Hashing #️⃣
 
 Now we have something completely different.
 
-### Goal:
+#### Goal:
 
 > **Produce a fixed-size fingerprint of data.**
 
@@ -228,11 +233,11 @@ That's not how cryptographic hashing works.
 
 ---
 
-# 5. Why do we need hashing?
+## 5. Why do we need hashing?
 
 One major web-development use case:
 
-## Password storage
+### Password storage
 
 Suppose a user chooses:
 
@@ -282,7 +287,7 @@ For passwords, use dedicated password-hashing algorithms such as:
 
 ---
 
-# 6. Why not SHA-256 for passwords?
+## 6. Why not SHA-256 for passwords?
 
 This is an important security lesson.
 
@@ -323,7 +328,7 @@ Password hashing
 
 ---
 
-# 7. Encoding 📦
+## 7. Encoding 📦
 
 Now the third concept.
 
@@ -335,7 +340,7 @@ Its purpose is:
 
 A classic example:
 
-## Base64
+### Base64
 
 Suppose you have binary data.
 
@@ -367,7 +372,7 @@ No password.
 
 ---
 
-# 8. Base64 is NOT encryption
+## 8. Base64 is NOT encryption
 
 This is one of the most common beginner mistakes.
 
@@ -401,7 +406,7 @@ So:
 
 ---
 
-# 9. Compare all three
+## 9. Compare all three
 
 |                           | Encryption | Hashing                    | Encoding       |
 | ------------------------- | ---------- | -------------------------- | -------------- |
@@ -415,7 +420,7 @@ So:
 
 ---
 
-# 10. Let's map this to your web stack
+## 10. Let's map this to your web stack
 
 Suppose you build:
 
@@ -431,7 +436,7 @@ MySQL
 
 Different mechanisms appear at different places.
 
-### HTTPS
+#### HTTPS
 
 ```text
 Browser
@@ -445,7 +450,7 @@ Backend
 
 ---
 
-### Password
+#### Password
 
 ```text
 User password
@@ -459,7 +464,7 @@ Database
 
 ---
 
-### JSON / API data
+#### JSON / API data
 
 ```text
 JavaScript object
@@ -475,7 +480,7 @@ That's **serialization/representation**, not encryption.
 
 ---
 
-### Base64
+#### Base64
 
 You may encounter:
 
@@ -491,7 +496,7 @@ Security comes from using **TLS/HTTPS** around the communication.
 
 ---
 
-# 11. JWT will test your understanding
+## 11. JWT will test your understanding
 
 Soon you'll encounter something like:
 
@@ -531,11 +536,11 @@ We'll cover JWT properly later.
 
 ---
 
-# 12. A better mental model
+## 12. A better mental model
 
 Instead of remembering definitions, ask:
 
-### "What problem am I solving?"
+#### "What problem am I solving?"
 
 ```text
 I need to hide the data.
@@ -557,7 +562,7 @@ That's the mental model.
 
 ---
 
-# 13. Connect it to CIA
+## 13. Connect it to CIA
 
 Now our previous chapters start connecting beautifully.
 
@@ -590,7 +595,7 @@ This distinction becomes important when we study TLS.
 
 ---
 
-# 🧠 Your security map so far
+## 🧠 Your security map so far
 
 You now have:
 
@@ -624,7 +629,7 @@ CRYPTOGRAPHIC BASICS
 
 ### The next chapter should be:
 
-# **Chapter 4 — Symmetric vs Asymmetric Cryptography**
+**Chapter 4 — Symmetric vs Asymmetric Cryptography**
 
 We'll answer the question that naturally comes next:
 
