@@ -26,6 +26,7 @@ Then the solution content follows.
 
 ## Where to start
 
+- [Roadmap](roadmap.md) — the full learning sequence and why it's in that order.
 - [Foundations](foundations/index.md) — the states-of-data model every later chapter leans on.
 - [Chapters](chapters/index.md) — the security sequence, starting with the CIA Triad.
 

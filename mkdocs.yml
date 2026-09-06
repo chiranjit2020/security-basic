@@ -63,6 +63,7 @@ validation:
 
 nav:
   - Home: index.md
+  - Roadmap: roadmap.md
   - Foundations:
       - foundations/index.md
       - The Three States of Data: foundations/states-of-data.md
