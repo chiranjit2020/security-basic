@@ -61,7 +61,7 @@ extra:
   seo:
     # Paste the token from Google Search Console → Settings → Ownership
     # verification → HTML tag (just the content="..." value).
-    google_site_verification: ""
+    google_site_verification: "8G7FLNWz8MH7hql0uVNdkX72ZHnBD8cvdN92zXzIdlg"
 
 not_in_nav: |
   offline.md
