@@ -71,4 +71,5 @@ nav:
   - Chapters:
       - chapters/index.md
       - Chapter 1 — CIA Triad: chapters/01-cia-triad.md
+      - Chapter 2 — Authentication vs Authorization: chapters/02-authentication-vs-authorization.md
       - Chapter 3 — Encryption vs Hashing vs Encoding: chapters/03-encryption-hashing-encoding.md

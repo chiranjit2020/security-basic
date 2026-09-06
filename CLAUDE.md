@@ -39,10 +39,17 @@ deploys to GitHub Pages. GitHub repo Settings → Pages → Source must be set t
   Ubuntu / Ubuntu Mono. Build is `--strict` with `validation:` set to warn on omitted/broken links.
 - `CHAPTER_TEMPLATE.md` (repo root, kept out of `docs/` so `--strict` stays clean) — start
   every new chapter from this.
-- `drafts/` — the owner's raw exploratory notes (`chapter-01..06.md`, `3-states-of-data.png`).
-  Source material only; **not** part of the built site. `drafts/chapter-05.md` is the CIA
-  Triad draft, `drafts/chapter-06.md` is Authentication vs Authorization. The `chapter-NN`
-  filenames there do not match the chapter numbers in their prose.
+- `drafts/` — the owner's raw source notes; **not** part of the built site. The `chapter-NN`
+  filenames do not match the published chapter numbers. Mapping of what's been published:
+  - `chapter-01.md` → `foundations/states-of-data.md`
+  - `chapter-02.md` → `foundations/backup-data.md`
+  - `chapter-03.md` → *empty*
+  - `chapter-04.md` → `roadmap.md`
+  - `chapter-05.md` → `chapters/01-cia-triad.md`
+  - `chapter-06.md` → `chapters/02-authentication-vs-authorization.md`
+  - `chapter-07.md` → `chapters/03-encryption-hashing-encoding.md`
+  New drafts may land as `drafts/chapter-08.md`, etc. `3-states-of-data.png` lives here and
+  is copied to `docs/assets/`.
 - `.github/workflows/deploy.yml` — CI build + Pages deploy.
 
 ## Adding a chapter (the core workflow)

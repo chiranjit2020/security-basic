@@ -6,7 +6,7 @@ the answer.
 | # | Chapter | Status |
 |---|---------|--------|
 | 1 | [CIA Triad](01-cia-triad.md) | Published |
-| 2 | Authentication vs Authorization | Pending |
+| 2 | [Authentication vs Authorization](02-authentication-vs-authorization.md) | Published |
 | 3 | [Encryption vs Hashing vs Encoding](03-encryption-hashing-encoding.md) | Published |
 
 <!--
