@@ -1,3 +1,7 @@
+---
+description: Data at rest, in use, and in transit — one model that ties together storage, memory, and network security for backend engineers.
+---
+
 # Foundation — The Three States of Data
 
 !!! question "The question"

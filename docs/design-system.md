@@ -1,3 +1,7 @@
+---
+description: The site's design system — a Red Hat Design System–derived palette, type scale, spacing, and components on an Ubuntu-typeface dark theme.
+---
+
 # Design System
 
 The visual language of this site is adapted from the

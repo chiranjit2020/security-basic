@@ -1,3 +1,7 @@
+---
+description: The CIA triad as an engineering mental model — confidentiality, integrity, and availability, and what you're actually protecting in a web application.
+---
+
 # Chapter 1 — CIA Triad
 
 !!! question "The question"

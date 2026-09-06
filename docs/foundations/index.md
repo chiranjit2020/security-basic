@@ -1,3 +1,7 @@
+---
+description: The states-of-data model the security chapters build on — data at rest, data in use, and data in transit.
+---
+
 # Foundations
 
 Before the security sequence (CIA → AuthN/AuthZ → Cryptography → …), there is one model

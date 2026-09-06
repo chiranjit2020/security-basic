@@ -1,3 +1,7 @@
+---
+description: The order to learn web security in — CIA triad, auth, cryptography, TLS, passwords, access control — and why that sequence beats memorising algorithms.
+---
+
 # Roadmap
 
 !!! question "The question"

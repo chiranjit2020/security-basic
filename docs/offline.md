@@ -2,6 +2,9 @@
 hide:
   - navigation
   - toc
+description: Offline fallback page.
+search:
+  exclude: true
 ---
 
 # Offline

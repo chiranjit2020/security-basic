@@ -1,3 +1,7 @@
+---
+description: A backend developer's mental model for web application security — the three states of data, the CIA triad, and why each mechanism (TLS, hashing, RBAC, JWT) exists.
+---
+
 # Security Basics
 
 A backend developer's **mental model** for web application security — built as one

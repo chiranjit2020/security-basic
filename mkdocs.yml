@@ -1,7 +1,7 @@
 site_name: Security Basics
 site_description: A backend developer's mental model for web application security.
 site_author: Chiranjit
-site_url: https://chiranjit2020.github.io/security-basic/
+site_url: https://www.chiranjitkarmakar.com/security-basic/
 repo_url: https://github.com/chiranjit2020/security-basic
 repo_name: chiranjit2020/security-basic
 edit_uri: edit/main/docs/
@@ -56,6 +56,12 @@ markdown_extensions:
 
 plugins:
   - search
+
+extra:
+  seo:
+    # Paste the token from Google Search Console → Settings → Ownership
+    # verification → HTML tag (just the content="..." value).
+    google_site_verification: ""
 
 not_in_nav: |
   offline.md

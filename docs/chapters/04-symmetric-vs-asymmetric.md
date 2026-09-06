@@ -1,3 +1,7 @@
+---
+description: Symmetric vs asymmetric cryptography — the key-distribution problem, public/private keys, digital signatures, and why TLS uses both.
+---
+
 # Chapter 4 — Symmetric vs Asymmetric Cryptography
 
 !!! question "The question"

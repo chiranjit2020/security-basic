@@ -1,3 +1,7 @@
+---
+description: The Security Basics chapters — each opens with a question, then the answer. CIA triad, authentication vs authorization, cryptography, TLS.
+---
+
 # Chapters
 
 Chapters are published here as they are written. Each one starts with a question, then

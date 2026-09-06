@@ -1,3 +1,7 @@
+---
+description: Authentication vs authorization for backend developers — identity vs permission, 401 vs 403, BOLA/IDOR, RBAC and ABAC, and never trusting the frontend.
+---
+
 # Chapter 2 — Authentication vs Authorization
 
 !!! question "The question"

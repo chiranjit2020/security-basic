@@ -1,3 +1,7 @@
+---
+description: Where backups fit in the three states of data, why "backup data" is not a fourth state, and the security concerns backups need of their own.
+---
+
 # Foundation — Backup Data
 
 !!! question "The question"

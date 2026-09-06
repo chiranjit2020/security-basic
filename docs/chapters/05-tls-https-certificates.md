@@ -1,3 +1,7 @@
+---
+description: How TLS and HTTPS actually work — certificates, Certificate Authorities, the handshake, and how your browser verifies it's really talking to the server.
+---
+
 # Chapter 5 — TLS, HTTPS & Digital Certificates
 
 !!! question "The question"

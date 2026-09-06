@@ -1,3 +1,7 @@
+---
+description: Encryption vs hashing vs encoding — three different jobs. Why Base64 isn't encryption, why SHA-256 isn't password storage, and where each belongs.
+---
+
 # Chapter 3 — Encryption vs Hashing vs Encoding
 
 !!! question "The question"
