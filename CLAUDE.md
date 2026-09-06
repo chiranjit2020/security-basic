@@ -89,6 +89,17 @@ RHDS gray scale, Red Hat red `#ee0000`, RHDS type/space scales, 3px radius, visi
 6. Run `python -m mkdocs build --strict` — it must pass with no warnings.
 7. Commit and push to `main`.
 
+**Unwritten chapters** (from the Roadmap sequence, 6–10) ship as "Coming soon"
+stubs: front matter `status: coming-soon` + `noindex: true`, body = a
+`!!! note "Coming soon"` linking to `../roadmap.md`. `status:` drives the nav
+marker (`extra.status.coming-soon` label + `theme.icon.status.coming-soon`
+icon, restyled into a "Coming soon" pill in `extra.css` §10); the `meta`
+plugin must stay enabled so `status:` resolves in the nav regardless of build
+order. `noindex: true` is honoured by `overrides/main.html` (robots) and
+`overrides/sitemap.xml` (exclusion). When the real content lands, drop both
+keys and the stub becomes a normal chapter — no YAML `: ` (colon-space) in
+`description:` or the whole front-matter block silently fails to parse.
+
 ## PWA
 
 The site is an installable, offline-capable PWA.
@@ -114,8 +125,9 @@ The site is an installable, offline-capable PWA.
   not the `github.io` one — this drives the auto-generated `sitemap.xml`, `<link rel="canonical">`,
   and all the absolute URLs in the OG/JSON-LD tags. Don't revert it.
 - `overrides/main.html` `extrahead` emits: per-page `robots`, Open Graph, Twitter Card,
-  and JSON-LD (`WebSite` on the homepage, `TechArticle` elsewhere). `offline.md` is forced
-  `noindex`.
+  and JSON-LD (`WebSite` on the homepage, `TechArticle` elsewhere). `offline.md` and any
+  page with front-matter `noindex: true` (the Coming-soon chapter stubs) are forced
+  `noindex`; `overrides/sitemap.xml` drops them from the sitemap too.
 - Every content page carries a unique `description:` in its YAML front matter — add one to
   each new chapter (~150 chars, distinct). Falls back to `site_description` if missing.
 - `docs/assets/og-image.png` (1200×630) is the share card — regenerate with

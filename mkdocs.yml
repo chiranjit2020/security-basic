@@ -34,6 +34,8 @@ theme:
     - search.highlight
   icon:
     repo: fontawesome/brands/github
+    status:
+      coming-soon: material/clock-outline
 
 extra_css:
   - stylesheets/extra.css
@@ -59,9 +61,14 @@ markdown_extensions:
 
 plugins:
   - search
+  # Pre-reads every page's front matter so `status:` markers resolve in the
+  # nav (nav_item.meta) regardless of page build order.
+  - meta
 
 extra:
   generator: false
+  status:
+    coming-soon: Coming soon
   seo:
     # Paste the token from Google Search Console → Settings → Ownership
     # verification → HTML tag (just the content="..." value).
@@ -92,3 +99,8 @@ nav:
       - Chapter 3 — Encryption vs Hashing vs Encoding: chapters/03-encryption-hashing-encoding.md
       - Chapter 4 — Symmetric vs Asymmetric Cryptography: chapters/04-symmetric-vs-asymmetric.md
       - Chapter 5 — TLS, HTTPS & Digital Certificates: chapters/05-tls-https-certificates.md
+      - Chapter 6 — Password Security: chapters/06-password-security.md
+      - Chapter 7 — Secrets & Key Management: chapters/07-secrets-key-management.md
+      - Chapter 8 — Data Integrity: chapters/08-data-integrity.md
+      - Chapter 9 — Access Control Models: chapters/09-access-control-models.md
+      - Chapter 10 — Backup Security: chapters/10-backup-security.md

@@ -433,6 +433,34 @@ body,
   border-bottom-color: var(--sb-border);
 }
 
+/* "Coming soon" chapters (status: coming-soon in front matter) — mute the
+   link and swap Material's status icon for a small "Coming soon" pill so
+   the label reads on mobile too, not just as a hover tooltip. */
+.md-nav__item:has(> .md-nav__link .md-status--coming-soon) > .md-nav__link {
+  color: var(--sb-text-muted);
+}
+.md-status--coming-soon {
+  flex-shrink: 0;
+  align-self: center;
+}
+.md-status--coming-soon::after {
+  content: "Coming soon";
+  -webkit-mask-image: none;
+          mask-image: none;
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  margin-inline-start: 0.4em;
+  padding: 0.1em 0.5em;
+  border: var(--rh-border-width-sm) solid var(--sb-border);
+  border-radius: var(--rh-border-radius-pill);
+  font: var(--rh-font-weight-regular) 0.62em / 1.4 var(--rh-font-family-text);
+  letter-spacing: 0;
+  white-space: nowrap;
+  color: var(--sb-text-muted);
+  vertical-align: baseline;
+}
+
 /* ------------------------------------------------------------------ *
  * 11. Design-system reference page helpers                            *
  * ------------------------------------------------------------------ */
