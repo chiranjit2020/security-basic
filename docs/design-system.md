@@ -7,9 +7,8 @@ description: The site's design system — a Red Hat Design System–derived pale
 The visual language of this site is adapted from the
 **[Red Hat Design System](https://ux.redhat.com/)** — its neutral gray scale,
 Red Hat red, type scale, 4px-based spacing, 3px radius, and visible focus ring.
-The typeface is **Ubuntu / Ubuntu Mono** rather than the Red Hat font family
-(with **OCR A Std** on the wordmark, headings, and inline code), and the theme
-is dark-first.
+The typeface is **Ubuntu / Ubuntu Mono** rather than the Red Hat font family,
+and the theme is dark-first.
 
 All values live as CSS custom properties in `docs/stylesheets/extra.css`
 (`--rh-*` for raw tokens, `--sb-*` for the semantic light/dark bindings).
@@ -62,22 +61,22 @@ All values live as CSS custom properties in `docs/stylesheets/extra.css`
 
 ## Typography
 
-Families: **Ubuntu** (body text), **OCR A Std** (the wordmark, every heading,
-and inline code), **Ubuntu Mono** (code blocks and ASCII/tree diagrams — OCR A
-has no box-drawing or arrow glyphs, so diagram blocks stay on Ubuntu Mono to
-keep the monospace grid). Body line-height `1.5`, heading line-height `1.3`.
-Headings render at a compressed 22 → 16 px scale.
+Families: **Ubuntu** (text — body, headings, and the wordmark) and **Ubuntu
+Mono** (code and ASCII/tree diagrams). Body line-height `1.65`, heading
+line-height `1.25`; headings carry `letter-spacing: var(--sb-heading-tracking)`
+(-0.014em) and the wordmark `var(--sb-wordmark-tracking)` (-0.01em). Headings
+render at a compressed 22 → 16 px scale (18 px flat on phones ≤600px, where
+body/code drop to 14 px).
 
 <div markdown="0">
-  <div class="sb-type-row"><span class="sb-type-row__label">h1<br>1.375rem · 700 · OCR A</span><span style="font-family:'OCR A Std',monospace;font-size:1.375rem;font-weight:700">Web Security</span></div>
-  <div class="sb-type-row"><span class="sb-type-row__label">h2<br>1.25rem · 700 · OCR A</span><span style="font-family:'OCR A Std',monospace;font-size:1.25rem;font-weight:700">Confidentiality</span></div>
-  <div class="sb-type-row"><span class="sb-type-row__label">h3<br>1.125rem · 500 · OCR A</span><span style="font-family:'OCR A Std',monospace;font-size:1.125rem;font-weight:500">Broken confidentiality</span></div>
-  <div class="sb-type-row"><span class="sb-type-row__label">h4–h6<br>1rem · OCR A</span><span style="font-family:'OCR A Std',monospace;font-size:1rem;font-weight:700">Session-based authentication</span></div>
+  <div class="sb-type-row"><span class="sb-type-row__label">h1<br>1.375rem · 700</span><span style="font-size:1.375rem;font-weight:700;letter-spacing:-0.014em">Web Security</span></div>
+  <div class="sb-type-row"><span class="sb-type-row__label">h2<br>1.25rem · 700</span><span style="font-size:1.25rem;font-weight:700;letter-spacing:-0.014em">Confidentiality</span></div>
+  <div class="sb-type-row"><span class="sb-type-row__label">h3<br>1.125rem · 500</span><span style="font-size:1.125rem;font-weight:500;letter-spacing:-0.014em">Broken confidentiality</span></div>
+  <div class="sb-type-row"><span class="sb-type-row__label">h4–h6<br>1rem · 500–700</span><span style="font-size:1rem;font-weight:700;letter-spacing:-0.014em">Session-based authentication</span></div>
   <div class="sb-type-row"><span class="sb-type-row__label">body-lg<br>1.125rem · 400</span><span style="font-size:1.125rem">Where is my data right now, and what protects it?</span></div>
   <div class="sb-type-row"><span class="sb-type-row__label">body-md<br>1rem · 400</span><span style="font-size:1rem">Encryption protects secrecy. Hashing verifies integrity.</span></div>
   <div class="sb-type-row"><span class="sb-type-row__label">body-sm<br>0.875rem · 400</span><span style="font-size:0.875rem">Caption and helper text</span></div>
-  <div class="sb-type-row"><span class="sb-type-row__label">inline code<br>OCR A Std</span><span style="font-family:'OCR A Std',monospace">GET /api/users/42</span></div>
-  <div class="sb-type-row"><span class="sb-type-row__label">code block<br>Ubuntu Mono</span><span style="font-family:'Ubuntu Mono',monospace">GET /api/users/42</span></div>
+  <div class="sb-type-row"><span class="sb-type-row__label">code<br>Ubuntu Mono</span><span style="font-family:'Ubuntu Mono',monospace">GET /api/users/42</span></div>
 </div>
 
 ---

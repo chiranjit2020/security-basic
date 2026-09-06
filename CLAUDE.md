@@ -36,8 +36,7 @@ deploys to GitHub Pages. GitHub repo Settings → Pages → Source must be set t
   - `docs/assets/` — images (e.g. `3-states-of-data.png`).
   - `docs/stylesheets/extra.css` — dark-theme tweaks and the `.question` admonition styling.
 - `mkdocs.yml` — site config. Theme: Material, `scheme: slate` (forced dark),
-  `primary`/`accent: custom` (styled in CSS), fonts Ubuntu / Ubuntu Mono + self-hosted
-  OCR A Std (headings, wordmark, inline code). Build is
+  `primary`/`accent: custom` (styled in CSS), fonts Ubuntu / Ubuntu Mono. Build is
   `--strict` with `validation:` set to warn on omitted/broken links.
 
 ## Design system
@@ -48,14 +47,14 @@ RHDS gray scale, Red Hat red `#ee0000`, RHDS type/space scales, 3px radius, visi
 
 - Everything lives in `docs/stylesheets/extra.css`: `--rh-*` are raw RHDS tokens,
   `--sb-*` are the semantic light/dark bindings, then Material `--md-*` overrides.
-- Fonts: **Ubuntu** for body; **OCR A Std** (self-hosted, `docs/assets/fonts/`,
-  `@font-face` at the top of `extra.css`) for the wordmark, all headings, inline
-  code, and the primary nav (top bar + drawer + sidebar links), always with
-  `letter-spacing: var(--sb-display-tracking)` (negative — OCR A sets wide);
-  **Ubuntu Mono** for code blocks and ASCII/tree diagrams — OCR A lacks
-  box-drawing/arrow glyphs, so `pre > code` is pinned to Ubuntu Mono to keep
-  diagram columns aligned. Heading scale is a compressed 22→16px (18px flat on
-  phones ≤600px, where body/code drop to 14px).
+- Fonts: **Ubuntu** for all text (body, headings, wordmark), **Ubuntu Mono**
+  for code and ASCII/tree diagrams. Headings carry `--sb-heading-tracking`
+  (-0.014em), the wordmark `--sb-wordmark-tracking` (-0.01em); body
+  line-height `--rh-line-height-body` is `1.65`, headings `1.25`. Body copy
+  (`p`/`ul`/`ol`/`blockquote`) is capped at a `42rem` measure. Heading scale
+  is a compressed 22→16px (18px flat on phones ≤600px, where body/code drop
+  to 14px). `pre > code` uses `line-height: 1.3` + `font-variant-ligatures:
+  none` so box-drawing diagrams keep their grid.
 - `docs/design-system.md` is the living reference (swatches, scale samples). Keep it in
   sync when tokens change.
 - Signature cues: red keyline under the header and under every `h1::after`; admonitions
