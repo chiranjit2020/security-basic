@@ -108,8 +108,10 @@ The site is an installable, offline-capable PWA.
   the `chiranjitkarmakar.com/security-basic/` custom domain.
 - `docs/sw.js` — service worker. Navigations: network-first → cache → `offline/`. Static
   GETs: stale-while-revalidate. Served from the site root, so its scope is the whole site.
-  Bump `CACHE = "security-basics-vN"` only when the SW *logic* changes (content refreshes
-  itself); nothing else needs a version bump.
+  Bump `CACHE` (currently `"web-security-v2"`) when the SW *logic* changes **or** to force
+  every client — installed mobile PWAs included — to drop stale assets: the `activate`
+  handler deletes every cache whose name ≠ `CACHE`. Routine content changes refresh on
+  their own and don't need a bump.
 - `docs/offline.md` — fallback page; kept out of the nav via `not_in_nav` in `mkdocs.yml`.
 - `overrides/main.html` — `custom_dir` template; its `extrahead` block injects the manifest
   link, apple-touch-icon, apple-mobile-web-app meta, and the SW registration. Paths use

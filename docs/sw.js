@@ -3,9 +3,13 @@
    Strategy:
      - navigations  -> network-first, fall back to cache, then the offline page
      - static GETs  -> stale-while-revalidate
-   Bump CACHE when this file's logic changes; content stays fresh on its own. */
+   Bump CACHE when this file's logic changes, or to force every client
+   (installed mobile PWAs included) to drop stale assets on the next visit —
+   the activate handler deletes every cache whose name != CACHE.
+     security-basics-v1 -> web-security-v2: full CSS/typography overhaul,
+     wipe the OCR-era cache (and align the name with the site rename). */
 
-const CACHE = "security-basics-v1";
+const CACHE = "web-security-v2";
 const OFFLINE_URL = "offline/";
 const PRECACHE = ["./", "offline/", "assets/icons/icon-192.png"];
 
