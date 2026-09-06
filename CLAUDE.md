@@ -35,8 +35,24 @@ deploys to GitHub Pages. GitHub repo Settings → Pages → Source must be set t
   - `docs/chapters/NN-slug.md` — one file per chapter.
   - `docs/assets/` — images (e.g. `3-states-of-data.png`).
   - `docs/stylesheets/extra.css` — dark-theme tweaks and the `.question` admonition styling.
-- `mkdocs.yml` — site config. Theme: Material, `scheme: slate` (forced dark), fonts
-  Ubuntu / Ubuntu Mono. Build is `--strict` with `validation:` set to warn on omitted/broken links.
+- `mkdocs.yml` — site config. Theme: Material, `scheme: slate` (forced dark),
+  `primary`/`accent: custom` (styled in CSS), fonts Ubuntu / Ubuntu Mono. Build is
+  `--strict` with `validation:` set to warn on omitted/broken links.
+
+## Design system
+
+The visual language is adapted from the **Red Hat Design System** (ux.redhat.com) —
+RHDS gray scale, Red Hat red `#ee0000`, RHDS type/space scales, 3px radius, visible
+2px blue focus ring — but keeps the Ubuntu typeface and is dark-first.
+
+- Everything lives in `docs/stylesheets/extra.css`: `--rh-*` are raw RHDS tokens,
+  `--sb-*` are the semantic light/dark bindings, then Material `--md-*` overrides.
+- `docs/design-system.md` is the living reference (swatches, scale samples). Keep it in
+  sync when tokens change.
+- Signature cues: red keyline under the header and under every `h1::after`; admonitions
+  are cards with a 3px left keyline in their status colour (`question` = purple).
+- Don't reintroduce a named Material palette colour — the custom bindings depend on
+  `data-md-color-primary="custom"` / `accent="custom"`.
 - `CHAPTER_TEMPLATE.md` (repo root, kept out of `docs/` so `--strict` stays clean) — start
   every new chapter from this.
 - `drafts/` — the owner's raw source notes; **not** part of the built site. The `chapter-NN`

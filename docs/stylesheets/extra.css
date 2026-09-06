@@ -1,33 +1,428 @@
-/* Security Basics — dark theme tweaks */
+/* ============================================================================
+   Security Basics — Design System
+   Adapted from the Red Hat Design System (https://ux.redhat.com).
+   Token values below are the RHDS "crayon" palette and scales; the theme is
+   dark-first, and the font is Ubuntu / Ubuntu Mono per the site brief.
+   ========================================================================== */
 
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Ubuntu+Mono:wght@400;700&display=swap");
+
+/* ------------------------------------------------------------------ *
+ * 1. Design tokens                                                    *
+ * ------------------------------------------------------------------ */
 :root {
+  /* --- Neutrals (RHDS gray) --- */
+  --rh-color-white:      #ffffff;
+  --rh-color-gray-10:    #f2f2f2;
+  --rh-color-gray-20:    #e0e0e0;
+  --rh-color-gray-30:    #c7c7c7;
+  --rh-color-gray-40:    #a3a3a3;
+  --rh-color-gray-50:    #707070;
+  --rh-color-gray-60:    #4d4d4d;
+  --rh-color-gray-70:    #383838;
+  --rh-color-gray-80:    #292929;
+  --rh-color-gray-90:    #1f1f1f;
+  --rh-color-gray-95:    #151515;
+  --rh-color-black:      #000000;
+
+  /* --- Brand + hues --- */
+  --rh-color-red-40:         #f56e6e;
+  --rh-color-red-50:         #ee0000;  /* Red Hat red */
+  --rh-color-red-60:         #a60000;
+  --rh-color-blue-30:        #92c5f9;
+  --rh-color-blue-40:        #4394e5;
+  --rh-color-blue-50:        #0066cc;
+  --rh-color-blue-60:        #004d99;
+  --rh-color-green-40:       #87bb62;
+  --rh-color-green-50:       #63993d;
+  --rh-color-green-60:       #3d7317;
+  --rh-color-yellow-20:      #ffe072;
+  --rh-color-yellow-30:      #ffcc17;
+  --rh-color-yellow-40:      #dca614;
+  --rh-color-orange-40:      #f5921b;
+  --rh-color-orange-50:      #ca6c0f;
+  --rh-color-red-orange-40:  #f4784a;
+  --rh-color-red-orange-50:  #f0561d;
+  --rh-color-red-orange-60:  #b1380b;
+  --rh-color-purple-30:      #b6a6e9;
+  --rh-color-purple-40:      #876fd4;
+  --rh-color-purple-50:      #5e40be;
+
+  /* --- Typography --- */
+  --rh-font-family-text: "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+  --rh-font-family-code: "Ubuntu Mono", "SFMono-Regular", Consolas, monospace;
+
+  --rh-font-size-body-sm:   0.875rem;  /* 14 */
+  --rh-font-size-body-md:   1rem;      /* 16 */
+  --rh-font-size-body-lg:   1.125rem;  /* 18 */
+  --rh-font-size-heading-xs: 1.25rem;  /* 20 */
+  --rh-font-size-heading-sm: 1.5rem;   /* 24 */
+  --rh-font-size-heading-md: 1.75rem;  /* 28 */
+  --rh-font-size-heading-lg: 2.25rem;  /* 36 */
+  --rh-font-size-heading-xl: 2.5rem;   /* 40 */
+
+  --rh-font-weight-regular: 400;
+  --rh-font-weight-medium:  500;
+  --rh-font-weight-bold:    700;
+
+  --rh-line-height-body:    1.5;
+  --rh-line-height-heading: 1.3;
+
+  /* --- Space scale (RHDS length) --- */
+  --rh-space-2xs: 0.125rem;  /* 2  */
+  --rh-space-xs:  0.25rem;   /* 4  */
+  --rh-space-sm:  0.375rem;  /* 6  */
+  --rh-space-md:  0.5rem;    /* 8  */
+  --rh-space-lg:  1rem;      /* 16 */
+  --rh-space-xl:  1.5rem;    /* 24 */
+  --rh-space-2xl: 2rem;      /* 32 */
+  --rh-space-3xl: 3rem;      /* 48 */
+  --rh-space-4xl: 4rem;      /* 64 */
+  --rh-space-5xl: 5rem;      /* 80 */
+  --rh-space-6xl: 6rem;      /* 96 */
+
+  /* --- Borders --- */
+  --rh-border-width-sm: 1px;
+  --rh-border-width-md: 2px;
+  --rh-border-width-lg: 3px;
+  --rh-border-radius:   3px;
+  --rh-border-radius-pill: 64px;
+
+  /* --- Semantic: light palette --- */
+  --sb-surface:        var(--rh-color-white);
+  --sb-surface-raised: var(--rh-color-gray-10);
+  --sb-surface-sunken: var(--rh-color-gray-10);
+  --sb-text:           var(--rh-color-gray-95);
+  --sb-text-muted:     var(--rh-color-gray-60);
+  --sb-border:         var(--rh-color-gray-30);
+  --sb-link:           var(--rh-color-blue-50);
+  --sb-brand:          var(--rh-color-red-50);
+
+  /* Font handles Material reads */
   --md-text-font: "Ubuntu";
   --md-code-font: "Ubuntu Mono";
 }
 
-/* Force the dark palette regardless of OS preference */
+/* ------------------------------------------------------------------ *
+ * 2. Material palette bindings                                        *
+ * ------------------------------------------------------------------ */
+
+/* Header / footer — Red Hat near-black */
+[data-md-color-primary="custom"] {
+  --md-primary-fg-color:        var(--rh-color-gray-95);
+  --md-primary-fg-color--light: var(--rh-color-gray-80);
+  --md-primary-fg-color--dark:  var(--rh-color-black);
+  --md-primary-bg-color:        var(--rh-color-white);
+  --md-primary-bg-color--light: var(--rh-color-gray-30);
+}
+
+/* Interactive accent — Red Hat red */
+[data-md-color-accent="custom"] {
+  --md-accent-fg-color:             var(--rh-color-red-50);
+  --md-accent-fg-color--transparent: rgba(238, 0, 0, 0.1);
+  --md-accent-bg-color:             var(--rh-color-white);
+  --md-accent-bg-color--light:      var(--rh-color-gray-30);
+}
+
+/* Dark (slate) scheme — neutral grays, not blue-tinted */
 [data-md-color-scheme="slate"] {
-  --md-hue: 210;
-  --md-default-bg-color: #12161c;
-  --md-code-bg-color: #1b2027;
+  --sb-surface:        var(--rh-color-gray-95);
+  --sb-surface-raised: var(--rh-color-gray-90);
+  --sb-surface-sunken: var(--rh-color-gray-90);
+  --sb-text:           var(--rh-color-gray-10);
+  --sb-text-muted:     var(--rh-color-gray-30);
+  --sb-border:         var(--rh-color-gray-70);
+  --sb-link:           var(--rh-color-blue-30);
+  --sb-brand:          var(--rh-color-red-50);
+
+  --md-hue: 0;
+  --md-default-bg-color:          var(--rh-color-gray-95);
+  --md-default-bg-color--light:   var(--rh-color-gray-90);
+  --md-default-bg-color--lighter: var(--rh-color-gray-80);
+  --md-default-bg-color--lightest:var(--rh-color-gray-70);
+  --md-default-fg-color:          var(--rh-color-gray-10);
+  --md-default-fg-color--light:   var(--rh-color-gray-30);
+  --md-default-fg-color--lighter: var(--rh-color-gray-40);
+  --md-default-fg-color--lightest:var(--rh-color-gray-60);
+
+  --md-code-bg-color: var(--rh-color-gray-90);
+  --md-code-fg-color: var(--rh-color-gray-20);
+
+  --md-typeset-a-color: var(--rh-color-blue-30);
+  --md-accent-fg-color:  var(--rh-color-red-40);
+
+  --md-footer-bg-color:        var(--rh-color-black);
+  --md-footer-bg-color--dark:  var(--rh-color-black);
 }
 
-/* Slightly roomier code blocks for the ASCII diagrams used throughout */
+/* ------------------------------------------------------------------ *
+ * 3. Typography                                                       *
+ * ------------------------------------------------------------------ */
+body,
+.md-typeset {
+  font-family: var(--rh-font-family-text);
+  font-size: var(--rh-font-size-body-md);
+  line-height: var(--rh-line-height-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-family: var(--rh-font-family-text);
+  line-height: var(--rh-line-height-heading);
+  color: var(--sb-text);
+}
+
+.md-typeset h1 {
+  font-size: var(--rh-font-size-heading-xl);
+  font-weight: var(--rh-font-weight-bold);
+  letter-spacing: -0.01em;
+  margin: 0 0 var(--rh-space-xl);
+  padding-bottom: var(--rh-space-md);
+  position: relative;
+}
+/* Red Hat keyline under the page title */
+.md-typeset h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 48px;
+  height: var(--rh-border-width-lg);
+  background: var(--sb-brand);
+}
+
+.md-typeset h2 {
+  font-size: var(--rh-font-size-heading-md);
+  font-weight: var(--rh-font-weight-bold);
+  letter-spacing: -0.005em;
+  margin-top: var(--rh-space-3xl);
+  margin-bottom: var(--rh-space-lg);
+}
+
+.md-typeset h3 {
+  font-size: var(--rh-font-size-heading-sm);
+  font-weight: var(--rh-font-weight-medium);
+  margin-top: var(--rh-space-2xl);
+}
+
+.md-typeset h4 {
+  font-size: var(--rh-font-size-heading-xs);
+  font-weight: var(--rh-font-weight-medium);
+  margin-top: var(--rh-space-xl);
+}
+
+.md-typeset h5,
+.md-typeset h6 {
+  font-size: var(--rh-font-size-body-md);
+  font-weight: var(--rh-font-weight-medium);
+  text-transform: none;
+  color: var(--sb-text-muted);
+}
+
+.md-typeset p,
+.md-typeset li {
+  font-size: var(--rh-font-size-body-md);
+}
+
+/* Links — RHDS: always underlined, brand blue */
+.md-typeset a {
+  color: var(--sb-link);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 1px;
+}
+.md-typeset a:hover,
+.md-typeset a:focus-visible {
+  color: var(--rh-color-red-50);
+  text-decoration-thickness: 2px;
+}
+[data-md-color-scheme="slate"] .md-typeset a:hover {
+  color: var(--rh-color-red-40);
+}
+
+/* ------------------------------------------------------------------ *
+ * 4. Focus ring (RHDS: visible, 2px blue, offset)                     *
+ * ------------------------------------------------------------------ */
+*:focus-visible {
+  outline: var(--rh-border-width-md) solid var(--rh-color-blue-50);
+  outline-offset: 2px;
+}
+[data-md-color-scheme="slate"] *:focus-visible {
+  outline-color: var(--rh-color-blue-30);
+}
+
+/* ------------------------------------------------------------------ *
+ * 5. Code                                                             *
+ * ------------------------------------------------------------------ */
+.md-typeset code,
 .md-typeset pre > code {
-  line-height: 1.5;
+  font-family: var(--rh-font-family-code);
+  font-size: 0.875em;
+  line-height: var(--rh-line-height-body);
+}
+.md-typeset :not(pre) > code {
+  border: var(--rh-border-width-sm) solid var(--sb-border);
+  border-radius: var(--rh-border-radius);
+  padding: 0.1em 0.35em;
+}
+.md-typeset pre > code {
+  border: var(--rh-border-width-sm) solid var(--sb-border);
+  border-radius: var(--rh-border-radius);
+}
+.md-typeset pre {
+  overflow-x: auto;
 }
 
-/* The "question" admonition that opens every chapter */
+/* ------------------------------------------------------------------ *
+ * 6. Admonitions — RHDS "alert": 3px left keyline, tinted ground      *
+ * ------------------------------------------------------------------ */
+.md-typeset .admonition,
+.md-typeset details {
+  font-size: var(--rh-font-size-body-md);
+  border: var(--rh-border-width-sm) solid var(--sb-border);
+  border-left-width: var(--rh-border-width-lg);
+  border-radius: var(--rh-border-radius);
+}
+.md-typeset .admonition-title,
+.md-typeset summary {
+  font-weight: var(--rh-font-weight-medium);
+}
+
+/* question — opens every chapter (RHDS purple / info) */
 .md-typeset .admonition.question,
 .md-typeset details.question {
-  border-color: #26c6da;
+  border-color: var(--rh-color-purple-40);
 }
 .md-typeset .question > .admonition-title,
 .md-typeset .question > summary {
-  background-color: rgba(38, 198, 218, 0.12);
+  background-color: rgba(135, 111, 212, 0.12);
+}
+.md-typeset .question > .admonition-title::before,
+.md-typeset .question > summary::before {
+  background-color: var(--rh-color-purple-40);
+  -webkit-mask-image: var(--md-admonition-icon--question);
+          mask-image: var(--md-admonition-icon--question);
 }
 
-/* Keep wide ASCII diagrams scrollable rather than squished */
-.md-typeset pre {
-  overflow-x: auto;
+.md-typeset .admonition.note,      .md-typeset details.note      { border-color: var(--rh-color-blue-50); }
+.md-typeset .note > .admonition-title,      .md-typeset .note > summary      { background-color: rgba(0, 102, 204, 0.1); }
+.md-typeset .admonition.tip,       .md-typeset details.tip       { border-color: var(--rh-color-green-50); }
+.md-typeset .tip > .admonition-title,       .md-typeset .tip > summary       { background-color: rgba(99, 153, 61, 0.12); }
+.md-typeset .admonition.warning,   .md-typeset details.warning   { border-color: var(--rh-color-orange-40); }
+.md-typeset .warning > .admonition-title,   .md-typeset .warning > summary   { background-color: rgba(245, 146, 27, 0.12); }
+.md-typeset .admonition.danger,    .md-typeset details.danger    { border-color: var(--rh-color-red-orange-50); }
+.md-typeset .danger > .admonition-title,    .md-typeset .danger > summary    { background-color: rgba(240, 86, 29, 0.12); }
+
+/* ------------------------------------------------------------------ *
+ * 7. Blockquotes                                                      *
+ * ------------------------------------------------------------------ */
+.md-typeset blockquote {
+  border-left: var(--rh-border-width-lg) solid var(--sb-border);
+  color: var(--sb-text-muted);
+}
+
+/* ------------------------------------------------------------------ *
+ * 8. Tables — RHDS: 2px brand keyline under the header                *
+ * ------------------------------------------------------------------ */
+.md-typeset table:not([class]) {
+  border: var(--rh-border-width-sm) solid var(--sb-border);
+  border-radius: var(--rh-border-radius);
+}
+.md-typeset table:not([class]) th {
+  background: var(--sb-surface-raised);
+  font-weight: var(--rh-font-weight-medium);
+  border-bottom: var(--rh-border-width-md) solid var(--sb-brand);
+}
+.md-typeset table:not([class]) td {
+  border-top: var(--rh-border-width-sm) solid var(--sb-border);
+}
+
+/* ------------------------------------------------------------------ *
+ * 9. Buttons                                                          *
+ * ------------------------------------------------------------------ */
+.md-typeset .md-button {
+  border-radius: var(--rh-border-radius);
+  border-width: var(--rh-border-width-md);
+  font-weight: var(--rh-font-weight-medium);
+  transition: background-color 0.1s, color 0.1s, border-color 0.1s;
+}
+.md-typeset .md-button--primary {
+  background-color: var(--rh-color-red-50);
+  border-color: var(--rh-color-red-50);
+  color: var(--rh-color-white);
+}
+.md-typeset .md-button--primary:hover,
+.md-typeset .md-button--primary:focus {
+  background-color: var(--rh-color-red-60);
+  border-color: var(--rh-color-red-60);
+  color: var(--rh-color-white);
+}
+
+/* ------------------------------------------------------------------ *
+ * 10. Nav / chrome polish                                             *
+ * ------------------------------------------------------------------ */
+.md-tabs,
+.md-header {
+  border-bottom: var(--rh-border-width-md) solid var(--rh-color-red-50);
+}
+.md-nav__link--active,
+.md-nav__link:focus,
+.md-nav__link:hover {
+  color: var(--sb-link);
+}
+.md-typeset hr {
+  border-bottom-color: var(--sb-border);
+}
+
+/* ------------------------------------------------------------------ *
+ * 11. Design-system reference page helpers                            *
+ * ------------------------------------------------------------------ */
+.sb-swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--rh-space-md);
+  margin: var(--rh-space-lg) 0;
+}
+.sb-swatch {
+  border: var(--rh-border-width-sm) solid var(--sb-border);
+  border-radius: var(--rh-border-radius);
+  overflow: hidden;
+  font-size: var(--rh-font-size-body-sm);
+}
+.sb-swatch__chip {
+  display: block;
+  height: 64px;
+}
+.sb-swatch__meta {
+  padding: var(--rh-space-md);
+  background: var(--sb-surface-raised);
+}
+.sb-swatch__name { font-weight: var(--rh-font-weight-medium); }
+.sb-swatch__hex  { color: var(--sb-text-muted); font-family: var(--rh-font-family-code); }
+
+.sb-type-row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--rh-space-lg);
+  padding: var(--rh-space-md) 0;
+  border-top: var(--rh-border-width-sm) solid var(--sb-border);
+}
+.sb-type-row__label {
+  flex: 0 0 8rem;
+  font-family: var(--rh-font-family-code);
+  font-size: var(--rh-font-size-body-sm);
+  color: var(--sb-text-muted);
+}
+
+.sb-space-bar {
+  display: inline-block;
+  height: 12px;
+  background: var(--rh-color-red-50);
+  border-radius: var(--rh-border-radius);
+  vertical-align: middle;
 }

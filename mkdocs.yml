@@ -14,8 +14,8 @@ theme:
     code: Ubuntu Mono
   palette:
     scheme: slate
-    primary: teal
-    accent: teal
+    primary: custom
+    accent: custom
   features:
     - navigation.instant
     - navigation.tracking
@@ -64,6 +64,7 @@ validation:
 nav:
   - Home: index.md
   - Roadmap: roadmap.md
+  - Design System: design-system.md
   - Foundations:
       - foundations/index.md
       - The Three States of Data: foundations/states-of-data.md
