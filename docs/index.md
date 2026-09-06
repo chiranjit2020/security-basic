@@ -24,6 +24,9 @@ Then the solution content follows.
 
 ---
 
-## Chapters
+## Where to start
 
-See the [Chapters index](chapters/index.md). More are added as they are written.
+- [Foundations](foundations/index.md) — the states-of-data model every later chapter leans on.
+- [Chapters](chapters/index.md) — the security sequence, starting with the CIA Triad.
+
+More are added as they are written.

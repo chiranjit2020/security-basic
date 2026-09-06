@@ -29,8 +29,11 @@ deploys to GitHub Pages. GitHub repo Settings → Pages → Source must be set t
 
 - `docs/` — the published site (this is `docs_dir`).
   - `docs/index.md` — landing page; explains the two anchor models and the Q&A format.
+  - `docs/foundations/` — states-of-data material that precedes the security sequence
+    (`states-of-data.md`, `backup-data.md`). Same question-first format as chapters.
   - `docs/chapters/index.md` — chapter list; has a table + `nav` reminder in an HTML comment.
   - `docs/chapters/NN-slug.md` — one file per chapter.
+  - `docs/assets/` — images (e.g. `3-states-of-data.png`).
   - `docs/stylesheets/extra.css` — dark-theme tweaks and the `.question` admonition styling.
 - `mkdocs.yml` — site config. Theme: Material, `scheme: slate` (forced dark), fonts
   Ubuntu / Ubuntu Mono. Build is `--strict` with `validation:` set to warn on omitted/broken links.

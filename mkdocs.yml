@@ -63,6 +63,10 @@ validation:
 
 nav:
   - Home: index.md
+  - Foundations:
+      - foundations/index.md
+      - The Three States of Data: foundations/states-of-data.md
+      - Backup Data: foundations/backup-data.md
   - Chapters:
       - chapters/index.md
       - Chapter 1 — CIA Triad: chapters/01-cia-triad.md
