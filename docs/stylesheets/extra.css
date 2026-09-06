@@ -63,8 +63,10 @@
   /* --- Typography --- */
   --rh-font-family-text: "Ubuntu", "Helvetica Neue", Arial, sans-serif;
   --rh-font-family-code: "OCR A Std", "Ubuntu Mono", "SFMono-Regular", Consolas, monospace;
-  /* OCR A display face for the wordmark and every heading */
+  /* OCR A display face for the wordmark, nav, and every heading.
+     OCR A sets wide — pull it in so it reads level with the Ubuntu body. */
   --sb-font-display: "OCR A Std", "Ubuntu Mono", "Ubuntu", monospace;
+  --sb-display-tracking: -0.03em;
 
   --rh-font-size-body-sm:   0.875rem;  /* 14 */
   --rh-font-size-body-md:   1rem;      /* 16 */
@@ -188,7 +190,7 @@ body,
 .md-typeset h6 {
   font-family: var(--sb-font-display);
   line-height: var(--rh-line-height-heading);
-  letter-spacing: 0;   /* OCR A is already wide — no negative tracking */
+  letter-spacing: var(--sb-display-tracking);
   color: var(--sb-text);
 }
 
@@ -290,6 +292,7 @@ body,
   border-radius: var(--rh-border-radius);
   padding: 0.1em 0.35em;
   overflow-wrap: anywhere;   /* let long URLs/tokens break on narrow screens */
+  letter-spacing: var(--sb-display-tracking);   /* OCR A runs wide inline */
 }
 .md-typeset pre > code {
   border: var(--rh-border-width-sm) solid var(--sb-border);
@@ -406,12 +409,20 @@ body,
 .md-header {
   border-bottom: var(--rh-border-width-md) solid var(--rh-color-red-50);
 }
-/* Wordmark — OCR A, matching the headings */
+/* Wordmark + nav — OCR A, matching the headings. Covers the top-bar
+   title, the slide-out drawer's title/logo, and every nav link (the
+   mobile sidebar menu was still falling back to Ubuntu). */
 .md-header__title,
-.md-header__topic {
+.md-header__topic,
+.md-nav__title,
+.md-nav--primary .md-nav__link {
   font-family: var(--sb-font-display);
+  letter-spacing: var(--sb-display-tracking);
+}
+.md-header__title,
+.md-header__topic,
+.md-nav__title {
   font-weight: var(--rh-font-weight-bold);
-  letter-spacing: 0;
 }
 .md-nav__link--active,
 .md-nav__link:focus,

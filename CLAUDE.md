@@ -49,10 +49,13 @@ RHDS gray scale, Red Hat red `#ee0000`, RHDS type/space scales, 3px radius, visi
 - Everything lives in `docs/stylesheets/extra.css`: `--rh-*` are raw RHDS tokens,
   `--sb-*` are the semantic light/dark bindings, then Material `--md-*` overrides.
 - Fonts: **Ubuntu** for body; **OCR A Std** (self-hosted, `docs/assets/fonts/`,
-  `@font-face` at the top of `extra.css`) for the wordmark, all headings, and
-  inline code; **Ubuntu Mono** for code blocks and ASCII/tree diagrams — OCR A
-  lacks box-drawing/arrow glyphs, so `pre > code` is pinned to Ubuntu Mono to
-  keep diagram columns aligned. Heading scale is a compressed 22→16px.
+  `@font-face` at the top of `extra.css`) for the wordmark, all headings, inline
+  code, and the primary nav (top bar + drawer + sidebar links), always with
+  `letter-spacing: var(--sb-display-tracking)` (negative — OCR A sets wide);
+  **Ubuntu Mono** for code blocks and ASCII/tree diagrams — OCR A lacks
+  box-drawing/arrow glyphs, so `pre > code` is pinned to Ubuntu Mono to keep
+  diagram columns aligned. Heading scale is a compressed 22→16px (18px flat on
+  phones ≤600px, where body/code drop to 14px).
 - `docs/design-system.md` is the living reference (swatches, scale samples). Keep it in
   sync when tokens change.
 - Signature cues: red keyline under the header and under every `h1::after`; admonitions
