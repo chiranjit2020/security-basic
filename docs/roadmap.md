@@ -60,27 +60,42 @@ What actually happens when your browser talks to a server?
 
 ↓
 
-**6. Password Security**
+**6. Password Security & Credential Storage**
 Hashing, salt, bcrypt/Argon2, password storage.
 
 ↓
 
-**7. Secrets & Key Management**
+**7. Sessions, Cookies, Tokens & JWTs**
+How a stateless server remembers your login; cookie security attributes, access/refresh tokens, session theft.
+
+↓
+
+**8. CSRF, XSS, CORS & the Same-Origin Policy**
+The browser as a security boundary.
+
+↓
+
+**9. Input Validation, Injection & SQL Injection**
+What happens when data supplied by a user is treated as instructions.
+
+↓
+
+**10. Secrets & Key Management**
 API keys, environment variables, secret managers, key rotation.
 
 ↓
 
-**8. Data Integrity**
+**11. Access Control & Privilege Escalation**
+ACL → RBAC → ABAC → least privilege; horizontal/vertical escalation, BOLA/IDOR, multi-tenant isolation.
+
+↓
+
+**12. Data Integrity**
 Hashes, checksums, HMAC, digital signatures.
 
 ↓
 
-**9. Access Control Models**
-ACL → RBAC → ABAC → least privilege.
-
-↓
-
-**10. Backup Security**
+**13. Backup Security**
 Encryption, retention, versioning, immutable backups, 3-2-1 strategy, ransomware considerations.
 
 ---

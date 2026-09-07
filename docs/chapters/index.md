@@ -14,11 +14,11 @@ the answer.
 | 3 | [Encryption vs Hashing vs Encoding](03-encryption-hashing-encoding.md) | Published |
 | 4 | [Symmetric vs Asymmetric Cryptography](04-symmetric-vs-asymmetric.md) | Published |
 | 5 | [TLS, HTTPS & Digital Certificates](05-tls-https-certificates.md) | Published |
-| 6 | [Password Security](06-password-security.md) | Coming soon |
-| 7 | [Secrets & Key Management](07-secrets-key-management.md) | Coming soon |
-| 8 | [Data Integrity](08-data-integrity.md) | Coming soon |
-| 9 | [Access Control Models](09-access-control-models.md) | Coming soon |
-| 10 | [Backup Security](10-backup-security.md) | Coming soon |
+| 6 | [Password Security & Credential Storage](06-password-security.md) | Published |
+| 7 | [Sessions, Cookies, Tokens & JWTs](07-sessions-cookies-tokens-jwt.md) | Published |
+| 8 | [CSRF, XSS, CORS & the Same-Origin Policy](08-csrf-xss-cors.md) | Published |
+| 9 | [Input Validation, Injection & SQL Injection](09-input-validation-injection.md) | Published |
+| 10 | [Secrets, Keys & Key Management](10-secrets-key-management.md) | Published |
 
 The order and scope come from the [Roadmap](../roadmap.md).
 

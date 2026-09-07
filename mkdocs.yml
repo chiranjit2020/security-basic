@@ -99,8 +99,8 @@ nav:
       - Chapter 3 — Encryption vs Hashing vs Encoding: chapters/03-encryption-hashing-encoding.md
       - Chapter 4 — Symmetric vs Asymmetric Cryptography: chapters/04-symmetric-vs-asymmetric.md
       - Chapter 5 — TLS, HTTPS & Digital Certificates: chapters/05-tls-https-certificates.md
-      - Chapter 6 — Password Security: chapters/06-password-security.md
-      - Chapter 7 — Secrets & Key Management: chapters/07-secrets-key-management.md
-      - Chapter 8 — Data Integrity: chapters/08-data-integrity.md
-      - Chapter 9 — Access Control Models: chapters/09-access-control-models.md
-      - Chapter 10 — Backup Security: chapters/10-backup-security.md
+      - Chapter 6 — Password Security & Credential Storage: chapters/06-password-security.md
+      - Chapter 7 — Sessions, Cookies, Tokens & JWTs: chapters/07-sessions-cookies-tokens-jwt.md
+      - Chapter 8 — CSRF, XSS, CORS & the Same-Origin Policy: chapters/08-csrf-xss-cors.md
+      - Chapter 9 — Input Validation, Injection & SQL Injection: chapters/09-input-validation-injection.md
+      - Chapter 10 — Secrets, Keys & Key Management: chapters/10-secrets-key-management.md
